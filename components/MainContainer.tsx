@@ -5,10 +5,10 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import _ from "lodash";
 import SegmentedControl from "@react-native-segmented-control/segmented-control";
 
-import { Text, View } from "./Themed";
+import { View } from "./Themed";
 import MusicList from "./MusicList";
 
-export default function EditScreenInfo() {
+export default function MainContainer() {
   const [text, setText] = useState("");
   const [segmentIndex, setSegmentIndex] = useState(0);
   const [musicList, setMusicList] = useState({ results: [], resultCount: 0 });

@@ -14,12 +14,6 @@ import _ from "lodash";
 import moment from "moment";
 import { useNavigation } from "@react-navigation/native";
 
-const Item = ({ title }: any) => (
-  <View style={styles.item}>
-    <Text style={styles.title}>{title}</Text>
-  </View>
-);
-
 interface IMusicDataProps {
   resultCount: number;
   results: any;
@@ -44,9 +38,10 @@ const MusicList = ({ list, segmentIndex }: IMusicListProps) => {
 
   const dataValyes = Object.values(data);
 
-  const renderItem = ({ item }: any | undefined) => {
+  const renderItem = ({ item, index }: any | undefined) => {
     return (
       <TouchableOpacity
+        key={item[0].collectionId}
         style={styles.itemContainer}
         onPress={() => navigation.navigate("Album", { item })}
       >
@@ -70,7 +65,7 @@ const MusicList = ({ list, segmentIndex }: IMusicListProps) => {
       <FlatList
         data={dataValyes}
         renderItem={renderItem}
-        keyExtractor={(item: any) => item[0].trackId}
+        keyExtractor={(item: any) => item[0].collectionId}
       />
     </SafeAreaView>
   );
@@ -99,15 +94,6 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     borderRadius: 10,
     alignSelf: "center",
-  },
-  item: {
-    backgroundColor: "#f9c2ff",
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
-  },
-  title: {
-    fontSize: 32,
   },
 });
 

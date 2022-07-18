@@ -23,13 +23,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 10,
   },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: "80%",
-  },
 });

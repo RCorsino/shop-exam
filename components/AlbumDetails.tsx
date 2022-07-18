@@ -1,4 +1,3 @@
-import { useNavigation, useNavigationState } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { FlatList, Image, Platform, StyleSheet } from "react-native";
@@ -8,7 +7,7 @@ import { Text, View } from "../components/Themed";
 export default function AlbumDetails({ item, navigation }: any) {
   const renderItem = ({ item, index }: any) => {
     return (
-      <View style={styles.itemContainer}>
+      <View key={index} style={styles.itemContainer}>
         <Text>{item.trackName}</Text>
       </View>
     );

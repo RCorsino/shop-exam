@@ -35,6 +35,7 @@ export default function CartContainer() {
           {cart.map((data: any) => {
             return (
               <ProductItem
+                key={data.id}
                 addProduct={false}
                 id={data.id}
                 display_name={data?.display_name}

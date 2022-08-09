@@ -31,7 +31,7 @@ const BrandList = ({ list, type }: IBrandListProps) => {
           navigation.navigate('Product', { type: type, item: item })
         }
       >
-        <FontAwesomeIcon icon={faTag} size="20" />
+        <FontAwesomeIcon icon={faTag} size={20} />
         <Text style={styles.text}>{item}</Text>
       </TouchableOpacity>
     )

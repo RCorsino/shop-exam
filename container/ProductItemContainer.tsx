@@ -34,6 +34,7 @@ export default function ProductItemContainer({
         {list.map((data: any) => {
           return (
             <ProductItem
+              key={data?.id}
               addProduct={true}
               id={data?.id}
               display_name={data?.display_name}

@@ -1,23 +1,13 @@
-import React from "react";
-import { StyleSheet } from "react-native";
+import React from 'react'
+import { styles } from './styles'
 
-import MainContainer from "../components/MainContainer";
-import { View } from "../components/Themed";
+import MainContainer from '../container/MainContainer'
+import { View } from '../components/Themed'
 
-export default function MusicScreen() {
+export default function MainScreen() {
   return (
     <View style={styles.container}>
       <MainContainer />
     </View>
-  );
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    paddingTop: 20,
-    backgroundColor: "white",
-  },
-});

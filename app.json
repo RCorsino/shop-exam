@@ -1,8 +1,10 @@
 {
   "expo": {
     "name": "Exam",
-    "slug": "Exam",
+    "slug": "unicorn-shop",
     "version": "1.0.0",
+    "owner": "dxrona",
+    // "sdkVersion": "46.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
@@ -17,9 +19,13 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
+      "bundleIdentifier": "com.unicorn.shop",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
+      "package": "com.unicorn.shop",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
